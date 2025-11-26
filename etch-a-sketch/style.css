@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(210, 204, 119)
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.square {
+    border: 1px black transparent;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+}
+
+/* remove hover coloring so drawing only happens while mouse is down */
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.reset, .again {
+    padding: 2px 5px;
+    margin: 0px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: lightgreen;
+}
