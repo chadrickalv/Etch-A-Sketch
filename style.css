@@ -10,7 +10,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-        background-color: rgb(210, 204, 119)
+    background-color: rgb(210, 204, 119)
 }
 
 .container {
@@ -31,19 +31,111 @@ body {
     background-color: white;
 }
 
-/* remove hover coloring so drawing only happens while mouse is down */
 
 .button-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 250px;
+    padding: 0px 4px;
+    margin: 5px;
+    row-gap: 5px;
+
 }
 
-.reset, .again {
-    padding: 2px 5px;
-    margin: 0px 10px;
-    font-size: 13px;
+.button-container button {
     cursor: pointer;
     background-color: lightgreen;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.4s ease-out;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+    margin: 10px;
+    font-size: 15px;
+    flex: 1;
+    padding: auto
+}
+
+.control-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 300px;
+    padding: 2px 6px;
+    margin: 10px;
+}
+
+.control-container button{
+    cursor: pointer;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.4s ease-out;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+    margin: 10px 30px;
+    flex-shrink: 0;
+    font-size: 16px;
+    padding: auto;
+}
+
+button:hover{
+    transform: scale(1.2);
+}
+
+.blue:hover {
+    background-color: blue;
+    color: blue;
+}
+.green:hover {
+    background-color: green;
+    color: green;
+}
+.red:hover {
+    background-color: red;
+    color: red;
+}
+.reset:hover {
+    background-color: rgb(121, 7, 7);
+    color:rgb(240, 240, 70);
+}
+.again:hover {
+    background-color: rgb(240, 48, 48);
+    color:aqua;
+}
+.eraser:hover {
+    background: lightgray;
+    color:lightgray;
+}
+.black:hover{
+    background-color: black;
+}
+.yellow:hover{
+    background-color: yellow;
+    color: yellow;
+}
+.pink:hover {
+    background-color: pink;
+    color: pink;
+}
+.purple:hover {
+    background-color: purple;
+    color: purple;
+}
+.random-color {
+    position: relative;
+}
+.random-color::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( 45deg, red, orange, yellow, green, blue, indigo, violet);
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 0.4s ease-out;
+    border-radius: inherit;
+}
+
+.random-color:hover::after {
+    opacity: 1;
 }
